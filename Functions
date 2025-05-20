@@ -1,0 +1,33 @@
+#!/bin/bash
+#use of function
+function greet {
+  echo "Hello, $1!"
+}
+# using arguments in function
+greet "Alice"
+# passing multiple arguments
+function add {
+  sum=$(( $1 + $2 ))
+  echo "Sum: $sum"
+}
+# accessing arguments
+add 5 10
+# accessing arguments in run time
+function multiply {
+  product=$(( $1 * $2 ))
+  echo "Product: $product"
+}
+# access arguments usinfg for loop
+function print_args {
+  for arg in "$@"; do
+    echo "Argument: $arg"
+  done
+}
+# calling the function
+print_args "arg1" "arg2" "arg3" 
+# shifting arguments
+function shift_args {
+  echo "Before shift: $1 $2 $3"
+  shift
+  echo "After shift: $1 $2 $3"
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+#use of at command
+echo "This is a test message" | at now + 1 minute
+#use of atq command
+atq
+#use of atrm command
+atq | awk '{print $1}' | xargs atrm
+#use of crontab command
+crontab -l
+#use of cron command
+echo "This is a test message" | at now + 1 minute

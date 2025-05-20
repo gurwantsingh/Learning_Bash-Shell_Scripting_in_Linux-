@@ -1,0 +1,42 @@
+#!/bin/bash
+# # use of for loop
+ for i in {1..5}
+ do
+   echo "Iteration $i"
+ done
+# iterate values from file
+ for i in $(cat file.txt)
+ do
+   echo "Value: $i"
+ done
+ # for loop with array
+ arr=(1 2 3 4 5)
+ for i in "${arr[@]}"
+ do
+   echo "Array Value: $i"
+ done
+# # use of while loop
+ count=1
+ while [ $count -le 5 ]
+ do
+   echo "Count: $count"
+   ((count++))
+ done
+# # use of until loop
+ count=1
+ until [ $count -gt 5 ]
+ do
+   echo "Count: $count"
+   ((count++))
+ done
+ # infinite loop
+  while true
+  do
+   echo "Infinite Loop"
+    sleep 1
+    done
+# read content from csv file
+while IFS=',' read -r col1 col2 col3
+do
+  echo "Column 1: $col1, Column 2: $col2, Column 3: $col3"
+done < file.csv

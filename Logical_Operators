@@ -1,0 +1,406 @@
+#!/bin/bash
+# Logical Operators in Bash
+# Logical operators are used to combine multiple conditions in a single statement.
+# The following logical operators are available in Bash:
+# 1. AND operator (&&)
+# 2. OR operator (||)
+# 3. NOT operator (!)
+# The AND operator (&&) is used to combine two conditions and returns true if both conditions are true.
+# The OR operator (||) is used to combine two conditions and returns true if at least one of the conditions is true.
+# The NOT operator (!) is used to negate a condition and returns true if the condition is false.
+# The following example demonstrates the use of logical operators in Bash:
+# #!/bin/bash
+# # use of AND operator
+a=5
+b=3
+if [ $a -gt 0 ] && [ $b -gt 0 ]
+then
+  echo "Both a and b are positive"
+else
+  echo "Either a or b is not positive"
+fi
+# # use of OR operator
+if [ $a -gt 0 ] || [ $b -gt 0 ]
+then
+  echo "At least one of a or b is positive"
+else
+  echo "Both a and b are not positive"
+fi
+# # use of NOT operator
+if [ ! $a -lt 0 ]
+then
+  echo "a is not less than 0"
+else
+  echo "a is less than 0"
+fi
+# # use of AND and OR operators together
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ $a -lt 0 ]
+then
+  echo "Either a is positive or b is positive or a is negative"
+else
+  echo "Both a and b are not positive and a is not negative"
+fi
+# # use of NOT operator with AND and OR operators
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ]
+then
+  echo "Both a and b are not negative"
+else
+  echo "Either a or b is negative"
+fi
+# # use of AND operator with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ $a -lt 10 ] && [ $b -lt 10 ]
+then
+  echo "Both a and b are positive and less than 10"
+else
+  echo "Either a or b is not positive or greater than or equal to 10"
+fi
+# # use of OR operator with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ $a -lt 0 ] || [ $b -lt 0 ]
+then
+  echo "At least one of a or b is positive or negative"
+else
+  echo "Both a and b are not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are not negative and not greater than 10"
+else
+  echo "Either a or b is negative or greater than 10"
+fi
+# # use of AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ $a -lt 0 ] || [ $b -lt 0 ]
+then
+  echo "Either a is positive or b is positive or a is negative or b is negative"
+else
+  echo "Both a and b are not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are not negative and not greater than 10"
+else
+  echo "Either a or b is negative or greater than 10"
+fi
+# # use of AND operator with multiple conditions and NOT operator
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ]
+then
+  echo "Both a and b are positive and not less than 10"
+else
+  echo "Either a or b is not positive or less than 10"
+fi
+# # use of OR operator with multiple conditions and NOT operator
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ]
+then
+  echo "At least one of a or b is positive or not negative"
+else
+  echo "Both a and b are not positive and negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are not negative and not greater than 10"
+else
+  echo "Either a or b is negative or greater than 10"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ]
+then
+  echo "Either a is positive or b is positive or not negative"
+else
+  echo "Both a and b are not positive and negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are not negative and not greater than 10"
+else
+  echo "Either a or b is negative or greater than 10"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10"
+else
+  echo "Both a and b are not positive and negative and greater than 10"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive"
+else
+  echo "Either a or b is negative or greater than 10 or positive"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10"
+else
+  echo "Both a and b are not positive and negative and greater than 10"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive"
+else
+  echo "Either a or b is negative or greater than 10 or positive"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi
+# # use of OR operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] || [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "At least one of a or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with multiple conditions and AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] || [ ! $a -lt 0 ] || [ ! $b -lt 0 ] || [ ! $a -gt 10 ] || [ ! $b -gt 10 ]
+then
+  echo "Either a is positive or b is positive or not negative or not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Both a and b are not positive and negative and greater than 10 and not negative and not positive and not negative"
+fi
+# # use of NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ ! $a -lt 0 ] && [ ! $b -lt 0 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ] && [ ! $a -gt 0 ] && [ ! $b -gt 0 ]
+then
+  echo "Both a and b are not negative and not greater than 10 and not positive and not negative and not positive and not negative"
+else
+  echo "Either a or b is negative or greater than 10 or positive or negative or positive or negative"
+fi
+# # use of AND operator with multiple conditions and NOT operator with AND and OR operators with multiple conditions and NOT operator with AND and OR operators with multiple conditions
+if [ $a -gt 0 ] && [ $b -gt 0 ] && [ ! $a -lt 10 ] && [ ! $b -lt 10 ] && [ ! $a -gt 10 ] && [ ! $b -gt 10 ]
+then
+  echo "Both a and b are positive and not less than 10 and not greater than 10 and not negative and not positive and not negative"
+else
+  echo "Either a or b is not positive or less than 10 or greater than 10 or negative or positive or negative"
+fi  

@@ -1,0 +1,25 @@
+#!/bin/bash
+# length of a string
+string="Hello World"
+length=${#string}
+echo "Length of string: $length"
+# uppercase
+string="Hello World"
+uppercase=${string^^}
+echo "Uppercase: $uppercase"
+# lowercase
+string="Hello World"
+lowercase=${string,,}
+echo "Lowercase: $lowercase"
+#replace
+string="Hello World"
+replace=${string/World/Bash}
+echo "Replace: $replace"
+#slice
+string="Hello World"
+slice=${string:0:5}
+echo "Slice: $slice"
+#substring
+string="Hello World"
+substring=${string:6:5}
+echo "Substring: $substring"

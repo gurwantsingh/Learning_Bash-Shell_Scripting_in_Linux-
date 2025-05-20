@@ -1,0 +1,6 @@
+#!/bin/bash
+# take user input
+echo "Enter your name: "
+read name
+# print user input
+echo "Hello $name"

@@ -1,0 +1,81 @@
+#!/bin/bash
+#using break in for loop
+for i in {1..5}; do
+  if [ $i -eq 3 ]; then
+    break
+  fi
+  echo "Number: $i"
+done
+#using continue in for loop
+for i in {1..5}; do
+  if [ $i -eq 3 ]; then
+    continue
+  fi
+  echo "Number: $i"
+done
+#using sleep in for loop
+for i in {1..5}; do
+  echo "Sleeping for $i seconds..."
+  sleep $i
+done
+#using wait in for loop
+for i in {1..5}; do
+  echo "Starting process $i..."
+  sleep $i &
+  wait $!
+  echo "Process $i completed."
+done
+#using exit in for loop
+for i in {1..5}; do
+  if [ $i -eq 3 ]; then
+    echo "Exiting loop at $i"
+    exit 0
+  fi
+  echo "Number: $i"
+done
+#using exit status in for loop
+for i in {1..5}; do
+  if [ $i -eq 3 ]; then
+    echo "Exiting loop at $i"
+    exit 1
+  fi
+  echo "Number: $i"
+done
+#connectivity check
+ping -c 1 google.com > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+  echo "Internet is reachable"
+else
+  echo "Internet is not reachable"
+fi
+#base name
+filename=$(basename "$0")
+echo "Base name of the script: $filename"
+#directory name
+dirname=$(dirname "$0")
+echo "Directory name of the script: $dirname"
+#realpath
+realpath=$(realpath "$0")
+echo "Real path of the script: $realpath"
+#check if file exists
+if [ -e "$0" ]; then
+  echo "File exists"
+else
+  echo "File does not exist"
+fi
+#bash variables
+#random number
+random_number=$((RANDOM % 100))
+echo "Random number: $random_number"
+#current date and time
+current_date=$(date)
+echo "Current date and time: $current_date"
+#current user
+current_user=$(whoami)
+echo "Current user: $current_user"
+#current shell
+current_shell=$(echo $SHELL)
+echo "Current shell: $current_shell"
+#current working directory
+current_dir=$(pwd)
+echo "Current working directory: $current_dir"

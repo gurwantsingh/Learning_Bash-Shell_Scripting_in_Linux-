@@ -1,0 +1,37 @@
+#!/bin/bash
+# use of if statement
+a=5
+b=3
+if [ $a -gt $b ]
+then
+  echo "$a is greater than $b"
+else
+  echo "$a is less than or equal to $b"
+fi
+# use of elif statement
+if [ $a -gt $b ]
+then
+  echo "$a is greater than $b"
+elif [ $a -lt $b ]
+then
+  echo "$a is less than $b"
+else
+  echo "$a is equal to $b"
+fi
+
+# use of case statement
+a=5
+case $a in
+  1)
+    echo "a is 1"
+    ;;
+  2)
+    echo "a is 2"
+    ;;
+  3)
+    echo "a is 3"
+    ;;
+  *)
+    echo "a is not 1, 2 or 3"
+    ;;
+esac

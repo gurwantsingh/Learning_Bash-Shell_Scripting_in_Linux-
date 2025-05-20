@@ -1,0 +1,14 @@
+#!/bin/bash
+a=5
+b=3
+c= a + b
+echo $c
+# to store the output of a command in a variable
+#!/bin/bash
+a=$(ls -l)
+echo $a
+#constant variables
+#!/bin/bash
+readonly a=5
+a=10
+echo $a

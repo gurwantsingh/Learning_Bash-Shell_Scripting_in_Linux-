@@ -1,0 +1,12 @@
+#!/bin/bash
+# how to use let command
+let a=5+3
+echo $a
+let a=5-3
+echo $a
+let a=5*3
+echo $a
+let a=5/3
+echo $a
+let a=5%3
+echo $a
